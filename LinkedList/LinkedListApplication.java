@@ -8,8 +8,13 @@ public class LinkedListApplication {
     linkedlist.addToFront(15422);
     linkedlist.addToFront(15);
     linkedlist.printList();
-    System.out.println(linkedlist.get(0));
-    System.out.println(linkedlist.get(4));
+    System.out.println("Linked List size: " + linkedlist.size());
+    System.out.println("Element at index 0 is: " + linkedlist.get(0));
+    System.out.println("Element at index 4 is: " + linkedlist.get(4));
+    linkedlist.remove(2);
+    linkedlist.printList();
+    System.out.println("Linked List size: " + linkedlist.size());
+
   }
 
 }

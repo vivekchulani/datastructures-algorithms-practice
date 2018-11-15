@@ -47,8 +47,26 @@ public class LinkedList {
 
 
   // Delete a node in the linked list
-  public boolean remove(int index) {
+  public boolean remove(int index) throws IndexOutOfBoundsException {
+
+    if (index < 0) {
+      throw new IndexOutOfBoundsException();
+    }
+
+    Node headNode = head;
+    if (headNode.getNext() != null) {
+
+    for (int i = 0; i < index; i++) {
+        headNode = headNode.getNext();
+    }
+
+    headNode.setNext(headNode.getNext().getNext());
+    counter--;
+    return true;
+    }
+
     return false;
+
   }
 
 
@@ -78,7 +96,7 @@ public class LinkedList {
     Node headNode = head;
     for (int i = 0; headNode.getNext() != null; i++) {
       headNode = headNode.getNext();
-      System.out.println(headNode.getElement());
+      System.out.println(String.valueOf(i) + " Element: " + headNode.getElement());
     }
   }
 
