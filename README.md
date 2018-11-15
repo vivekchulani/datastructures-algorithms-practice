@@ -12,6 +12,7 @@ Create methods which accomplish the following:
 6) `printList` -> Print all elements in linked list 
 7) `size` -> Retrieve size of linked list 
 8) `reverse` -> Reverses linked list 
+9) `findKthElement` -> find the kth to last element
 TODO: Use generics for data and check edge cases for each method
 
 Create a Stack using custom linked list
