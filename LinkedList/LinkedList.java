@@ -1,5 +1,5 @@
 import java.lang.IndexOutOfBoundsException;
-
+// TODO: Look at edge case scenarios for each method
 public class LinkedList {
 
   private Node head;
@@ -27,7 +27,26 @@ public class LinkedList {
   }
 
   // Add node at a given index
-  
+  public void add(int data, int index) {
+
+    Node headNode = head;
+
+    if (index < 0) {
+      throw new IndexOutOfBoundsException();
+    }
+
+    if (headNode.getNext() != null) {
+
+      for (int i = 0; i < index; i++) {
+        headNode = headNode.getNext();
+      }
+
+      Node newNode = new Node(data);
+      newNode.setNext(headNode.getNext());
+      headNode.setNext(newNode);
+      counter++;
+    }
+  }
 
 
   // Add node at the beginning of a linked list

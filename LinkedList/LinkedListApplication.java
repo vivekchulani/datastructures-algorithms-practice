@@ -14,6 +14,9 @@ public class LinkedListApplication {
     linkedlist.remove(2);
     linkedlist.printList();
     System.out.println("Linked List size: " + linkedlist.size());
+    linkedlist.add(255, 3);
+    System.out.println("Element at index 3 is: " + linkedlist.get(3));
+    linkedlist.printList();
 
   }
 
