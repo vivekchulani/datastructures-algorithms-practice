@@ -18,6 +18,15 @@ public class LinkedListApplication {
     System.out.println("Element at index 3 is: " + linkedlist.get(3));
     linkedlist.printList();
 
+    // Stack implementation
+    Stack stack = new Stack();
+    stack.push(22);
+    stack.push(12);
+    stack.push(33);
+    stack.printStack();
+    stack.peek();
+    stack.pop();
+    stack.printStack();
   }
 
 }
