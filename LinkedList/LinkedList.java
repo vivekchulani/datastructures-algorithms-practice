@@ -1,4 +1,6 @@
-public class LinkedListExample {
+import java.lang.IndexOutOfBoundsException;
+
+public class LinkedList {
 
   private Node head;
   private int counter;
@@ -45,13 +47,40 @@ public class LinkedListExample {
 
 
   // Delete a node in the linked list
+  public boolean remove(int index) {
+    return false;
+  }
 
 
   // Get value of element at a given index
+  public int get(int index) throws IndexOutOfBoundsException {
+
+    if (index < 0) {
+      throw new IndexOutOfBoundsException();
+    }
+
+    Node headNode = head;
+    if (headNode.getNext() != null) {
+      headNode = headNode.getNext();
+    }
+
+    for (int i = 0; i < index; i++) {
+      headNode = headNode.getNext();
+    }
+
+    return headNode.getElement();
+
+  }
 
 
   // Print elements in a linked list
-  
+  public void printList() {
+    Node headNode = head;
+    for (int i = 0; headNode.getNext() != null; i++) {
+      headNode = headNode.getNext();
+      System.out.println(headNode.getElement());
+    }
+  }
 
   // Retrieve size of linked list
   public int size() {
