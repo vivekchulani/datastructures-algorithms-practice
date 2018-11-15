@@ -11,6 +11,7 @@ Create methods which accomplish the following:
 5) `get` -> Retrieve element at specified index
 6) `printList` -> Print all elements in linked list 
 7) `size` -> Retrieve size of linked list 
+8) `reverse` -> Reverses linked list 
 TODO: Use generics for data and check edge cases for each method
 
 Create a Stack using custom linked list
