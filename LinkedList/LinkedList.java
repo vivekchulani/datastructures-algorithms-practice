@@ -111,19 +111,33 @@ public class LinkedList {
   }
 
   // Find the kth to last element
-  // TODO: Another implementation?
+  // Another implementation? Using the runner technique
   public int findKthElement(int index) {
 
-    Node headNode = head;
-    int size = 0;
+    // Node headNode = head;
+    // int size = 0;
+    //
+    // while(headNode.getNext() != null) {
+    //   headNode = headNode.getNext();
+    //   size++;
+    // }
+    //
+    // headNode = head;
+    // for (int i = 0; i < (size-index); i++) {
+    //   headNode = headNode.getNext();
+    // }
+    //
+    // return headNode.getElement();
 
-    while(headNode.getNext() != null) {
-      headNode = headNode.getNext();
-      size++;
+    Node headNode = head;
+    Node headNodeK = head;
+
+    for (int i = 0; i < index-1; i++) {
+      headNodeK = headNodeK.getNext();
     }
 
-    headNode = head;
-    for (int i = 0; i < (size-index); i++) {
+    while (headNodeK.getNext() != null) {
+      headNodeK = headNodeK.getNext();
       headNode = headNode.getNext();
     }
 
