@@ -113,7 +113,7 @@ public class LinkedList {
   // Find the kth to last element
   // Another implementation? Using the runner technique
   public int findKthElement(int index) {
-
+    // First method would require two iterations
     // Node headNode = head;
     // int size = 0;
     //
@@ -147,7 +147,7 @@ public class LinkedList {
 
   // Reverses linked list
   public void reverse() {
-    
+
   }
 
 
