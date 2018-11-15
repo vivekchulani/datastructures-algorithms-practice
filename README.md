@@ -12,3 +12,8 @@ Create methods which accomplish the following:
 6) `printList` -> Print all elements in linked list 
 7) `size` -> Retrieve size of linked list 
 TODO: Use generics for data and check edge cases for each method
+
+Create a Stack using custom linked list
+1) `push` -> Push specified element onto stack
+2) `pop` -> Get element from stack
+3) `peek` -> Return top most element without removing it
