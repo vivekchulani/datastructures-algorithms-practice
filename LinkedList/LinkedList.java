@@ -110,6 +110,31 @@ public class LinkedList {
 
   }
 
+  // Find the kth to last element
+  // TODO: Another implementation?
+  public int findKthElement(int index) {
+
+    Node headNode = head;
+    int size = 0;
+
+    while(headNode.getNext() != null) {
+      headNode = headNode.getNext();
+      size++;
+    }
+
+    headNode = head;
+    for (int i = 0; i < (size-index); i++) {
+      headNode = headNode.getNext();
+    }
+
+    return headNode.getElement();
+
+  }
+
+  // Reverses linked list
+  public void reverse() {
+  }
+
 
   // Print elements in a linked list
   public void printList() {

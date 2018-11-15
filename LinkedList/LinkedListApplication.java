@@ -17,6 +17,7 @@ public class LinkedListApplication {
     linkedlist.add(255, 3);
     System.out.println("Element at index 3 is: " + linkedlist.get(3));
     linkedlist.printList();
+    System.out.println("3rd to last element is: " + linkedlist.findKthElement(3));
 
     // Stack implementation
     Stack stack = new Stack();
